@@ -1,14 +1,14 @@
 <?php
 $hostnom = "btssio.dedyn.io";
-$bdd = "MOUNZIH_tp3";
 $usernom = "MOUNZIH";
 $password = "04072007";
+$bdd = "MOUNZIH_tp3";
 
+<?php
 try {
-    $monPdo = new PDO("mysql:$hostnom;dbname=$bdd;charset=utf8", $usernom, $password);
-    $monPdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $connexion = new PDO("mysql:host=localhost;dbname=bibliotheque;charset=utf8", "root", "");
+    $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    echo $e->getMessage();
-    $monPdo = null;
+    die("Erreur connexion : " . $e->getMessage());
 }
 ?>

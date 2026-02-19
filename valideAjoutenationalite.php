@@ -1,7 +1,7 @@
 <?php 
 include "header.php";
 include "connexionPdo.php";
-$libelle=$_POST['libelle']; //récupération du libellé du formulaire hehehehehehehehehehehehe
+$libelle=$_POST['libelle'];
 
 $req=$monPdo->prepare("insert into nationalite(libelle) values(:libelle)");
 $req->bindParam(':libelle', $libelle);
